@@ -9,7 +9,6 @@
   "author": "PWall",
   "license": "ISC",
   "dependencies": {
-    "discord-webhook-node": "^1.0.7",
     "discord.js": "^12.2.0",
     "googleapis": "^48.0.0",
     "html-to-text": "^5.1.1",
