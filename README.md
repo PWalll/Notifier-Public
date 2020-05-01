@@ -1,6 +1,7 @@
 # Notifier
 This is a notifier for my gmail using gapi and discord-webhook.
 First download the code with this [url](https://github.com/PWalll/Notifier-Public/archive/master.zip).
+
 Then you must go to the [Google Quickstart](https://developers.google.com/gmail/api/quickstart/nodejs) and click the enable the Gmail API button.
 ![](https://bit.ly/2KS9hIc)
 After you select the desktop option in the drop-down menu and click on create.
