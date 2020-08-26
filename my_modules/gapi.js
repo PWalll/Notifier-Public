@@ -16,10 +16,10 @@ async function authorize(credentials) {
 		const token = fs.readFileSync(TOKEN_PATH);
 		oAuth2Client.setCredentials(JSON.parse(token));
 		return oAuth2Client;
-	} else return await test(oAuth2Client);
+	} else return await GetNewToken(oAuth2Client);
 };
 
-async function test(oAuth2Client) {
+async function GetNewToken(oAuth2Client) {
 	const authUrl = oAuth2Client.generateAuthUrl({
 		access_type: "offline",
 		scope: SCOPES,
@@ -28,17 +28,13 @@ async function test(oAuth2Client) {
 	const code = readlinesync.question("Enter the code from that page here: ");
 	const { tokens } = await oAuth2Client.getToken(code);
 	getNewToken(oAuth2Client, tokens)
-};
-
-function getNewToken(oAuth2Client, tokens) {
-	console.log(tokens);
 	oAuth2Client.setCredentials(tokens);
 	fs.writeFileSync(TOKEN_PATH, JSON.stringify(tokens));
 };
 
 module.exports = {
 	async getAuth() {
-		var creds = fs.readFileSync("credentials.json");
+		const creds = fs.readFileSync("credentials.json");
 		return authorize(JSON.parse(creds));
 	}
 };
