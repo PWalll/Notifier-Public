@@ -6,7 +6,7 @@ module.exports = {
 	async ListLastEmail() {
 		const auth = await gapi.getAuth();
 		const userId = "me";
-		const query = `label:lossauces`;
+		const query = `label:${label}`;
 		const gmail = google.gmail({ version: "v1", auth });
 		const list = await gmail.users.messages.list({ userId: userId, q: query });
 		const id = list.data.messages[0].id;
@@ -19,13 +19,5 @@ module.exports = {
 			id: email.data.id
 		}
 		return info;
-	},
-	async TestingApi() {
-		const auth = await gapi.getAuth();
-		const userId = "me";
-		const query = "label:lossauces";
-		const gmail = google.gmail({ version: "v1", auth });
-		const list = await gmail.users.messages.list({ userId: userId, q: query });
-		return list;
 	}
 }

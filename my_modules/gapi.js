@@ -1,7 +1,6 @@
 const fs = require("fs");
 const SCOPES = ["https://www.googleapis.com/auth/gmail.readonly", "https://www.googleapis.com/auth/calendar"];
 const TOKEN_PATH = "token.json";
-const readline = require("readline");
 const readlinesync = require("readline-sync");
 const { google } = require("googleapis");
 
