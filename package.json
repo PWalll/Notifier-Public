@@ -1,24 +1,25 @@
 {
-  "name": "notifier",
-  "version": "1.0.0",
-  "description": "A notfier from my email to discord.",
-  "main": "main.js",
-  "scripts": {
-    "devstart": "nodemon main.js"
-  },
-  "author": "PWall",
-  "license": "ISC",
-  "dependencies": {
-    "discord.js": "^12.2.0",
-    "googleapis": "^48.0.0",
-    "html-to-text": "^5.1.1",
-    "nodejs-base64": "^1.0.3"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/PWalll/Notifier"
-  }
+	"name": "notifier",
+	"version": "1.0.0",
+	"description": "A notfier from my email to discord.",
+	"main": "main.js",
+	"scripts": {
+		"devstart": "nodemon main.js"
+	},
+	"author": "PWall",
+	"license": "MIT",
+	"dependencies": {
+		"discord.js": "^12.2.0",
+		"googleapis": "^48.0.0",
+		"html-to-text": "^5.1.1",
+		"nodejs-base64": "^1.0.3",
+		"readline-sync": "^1.4.10"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/PWalll/Notifier-Public"
+	}
 }

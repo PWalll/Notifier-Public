@@ -3,3 +3,4 @@ secrets.json
 token.json
 credentials.json
 *.txt
+*.backup
