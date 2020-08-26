@@ -6,11 +6,11 @@ Notifier-Public, is an node.js app that retrives emails from gmail, using the gm
 
 1.	Download the code from [here](https://github.com/PWalll/Notifier-Public/archive/master.zip).
 2.	Extract the zip.
-3.	Get a credentials.json of your google account. [Tutorial here]()
+3.	Get a credentials.json of your google account. [Tutorial here](credentials.md)
 4.	Place it in the directory you extracted the zip.
 5.	Open a terminal and get into that directory.
-6.	Write `npm install` and hit enter to install the dependencies of the project.
-7.	Then, write node main.js and hit enter.
+6.	Run `npm install` to install the dependencies of the project.
+7.	Then, run `node main.js`.
 8. 	You will be prompted with an url, you go to it sing in with your google account.
 9.	Then you will get a warning screen with the name of the project of the credentials.json.
 10.	You go to advanced and then get into `Go to (name of the project)`

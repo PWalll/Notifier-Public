@@ -5,10 +5,9 @@ const htmlToText = require('html-to-text');
 const Discord = require("discord.js");
 const secrets = require("./secrets.json")
 const client = new Discord.Client();
-const label = "";
 var ready;
 
-if (!fs.existsSync('lastemail.txt')) {fs.writeFileSync('lastemail.txt', " ");}
+if (!fs.existsSync('lastid.txt')) {fs.writeFileSync('lastid.txt', " ");}
 
 async function start() {
 	var info = await gmail.ListLastEmail();
@@ -24,35 +23,32 @@ function timenow() {
 	return hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
 };
 
-function lastemail() {
-	return fs.readFileSync('lastemail.txt','utf8');
+function lastid() {
+	return fs.readFileSync('lastid.txt','utf8');
 };
 
-function sendtodiscord(url,info, text) {
+function sendtodiscord(text) {
 	secrets.IDs.forEach(function(id) {
 		plaze = secrets.IDs.indexOf(id)
-		embed = new Discord.MessageEmbed().setTitle(`Nuevo: ${info}`).setURL(url.replace('&person=14541', `&person=${secrets.PhidiasID[plaze]}`)).setDescription(text).setColor(7785669).setTimestamp();
+		embed = new Discord.MessageEmbed().setTitle(`New Email`).setDescription(text).setColor(7785669).setTimestamp();
 		client.users.cache.get(id).send(embed);
 	});
 };
 
 
 function checkmessage(info) {
-	
 	if (ready == 1) {
-		let text = htmlToText.fromString(html, {wordwrap: 130});
-		if (rmnumber != 0) {
-			urlextracter(html);
-			if (url != lasturl()) {
-				process.stdout.write(`[${timenow()}] ${text}\n`);
-				sendtodiscord(url, info, text);
-			};
+		let text = htmlToText.fromString(info.html, {wordwrap: 130});
+		let id = info.id
+		if (id != lastid()) {
+			process.stdout.write(`[${timenow()}] ${info.snippet}\n`);
+			sendtodiscord(text);
 		};
-		fs.writeFileSync('lasturl.txt', url);
+		fs.writeFileSync('lastid.txt', id);
 	};
 };
 
-/*client.login(secrets.discordtoken);
+client.login(secrets.discordtoken);
 
 client.once('ready', () => {
 	console.log('Ready!');
@@ -63,8 +59,4 @@ start();
 
 setInterval(function(){
     start();
-}, 30000);*/
-async function test() {
-	console.log(await gmail.ListLastEmail())
-}
-test()
+}, 30000);
