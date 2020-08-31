@@ -29,14 +29,7 @@ Discord Application
 
 Node.JS download [page](https://nodejs.org/en/download/).
 How to install Node.JS on windows [here](https://phoenixnap.com/kb/install-node-js-npm-on-windows).
-How to get Discord Application and bot token [here]{https://www.writebots.com/discord-bot-token/}.
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+How to get Discord Application and bot token [here](https://www.writebots.com/discord-bot-token/).
 
 ## Built With
 
@@ -53,7 +46,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
