@@ -22,7 +22,7 @@ Notifier-Public, is an node.js app that retrives emails from gmail, using the gm
 ### Prerequisites
 
 ```
-Node.JS
+Node.JS v12.13.0
 Discord
 Discord Application
 ```
