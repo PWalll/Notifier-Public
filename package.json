@@ -9,14 +9,14 @@
 	"author": "PWall",
 	"license": "MIT",
 	"dependencies": {
-		"discord.js": "^12.2.0",
-		"googleapis": "^48.0.0",
+		"discord.js": "^12.4.1",
+		"googleapis": "^63.0.0",
 		"html-to-text": "^5.1.1",
 		"nodejs-base64": "^1.0.3",
 		"readline-sync": "^1.4.10"
 	},
 	"devDependencies": {
-		"nodemon": "^2.0.3"
+		"nodemon": "^2.0.6"
 	},
 	"repository": {
 		"type": "git",
